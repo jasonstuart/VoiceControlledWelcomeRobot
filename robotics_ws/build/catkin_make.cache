@@ -1,0 +1,2 @@
+pocketsphinx:researchProject:turtlecontroller
+-DCATKIN_DEVEL_PREFIX=/home/peter/robotics_ws/devel -DCMAKE_INSTALL_PREFIX=/home/peter/robotics_ws/install -G Unix Makefiles

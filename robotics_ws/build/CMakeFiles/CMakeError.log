@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/peter/robotics_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c1274/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c1274.dir/build.make CMakeFiles/cmTC_c1274.dir/build
+make[1]: Entering directory '/home/peter/robotics_ws/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c1274.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_c1274.dir/CheckSymbolExists.c.o   -c /home/peter/robotics_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_c1274
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c1274.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_c1274.dir/CheckSymbolExists.c.o  -o cmTC_c1274 -rdynamic 
+CMakeFiles/cmTC_c1274.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_c1274.dir/build.make:97: recipe for target 'cmTC_c1274' failed
+make[1]: *** [cmTC_c1274] Error 1
+make[1]: Leaving directory '/home/peter/robotics_ws/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_c1274/fast' failed
+make: *** [cmTC_c1274/fast] Error 2
+
+File /home/peter/robotics_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/peter/robotics_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d34f0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d34f0.dir/build.make CMakeFiles/cmTC_d34f0.dir/build
+make[1]: Entering directory '/home/peter/robotics_ws/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d34f0.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_d34f0.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d34f0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d34f0.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_d34f0.dir/CheckFunctionExists.c.o  -o cmTC_d34f0 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_d34f0.dir/build.make:97: recipe for target 'cmTC_d34f0' failed
+make[1]: *** [cmTC_d34f0] Error 1
+make[1]: Leaving directory '/home/peter/robotics_ws/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_d34f0/fast' failed
+make: *** [cmTC_d34f0/fast] Error 2
+
+

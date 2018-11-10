@@ -1,0 +1,8 @@
+prefix=/home/peter/robotics_ws/devel
+
+Name: turtlecontroller
+Description: Description of turtlecontroller
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/peter/robotics_ws/devel/lib 
+Requires: 

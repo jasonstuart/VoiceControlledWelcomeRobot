@@ -1,0 +1,8 @@
+prefix=/home/peter/robotics_ws/install
+
+Name: researchProject
+Description: Description of researchProject
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/peter/robotics_ws/install/lib 
+Requires: 
