@@ -9,6 +9,7 @@ from tf.transformations import quaternion_from_euler
 from geometry_msgs.msg import Pose, Point, Quaternion, Twist
 from math import radians, pi
 import pyttsx
+import os
 
 #class definitions
 class Coordinate:
@@ -36,7 +37,8 @@ class Location:
 
 #loads all the points in the text file into the location class for ease of use
 def loadPoints():
-    file = open("./src/researchProject/scripts/coordinates.txt", "r")  
+    home = os.path.expanduser("~")
+    file = open(home+"/robotics_ws/src/researchproject/scripts/coordinates.txt", "r")  
     fileContents = file.read().splitlines()
     print(fileContents)
     locations = np.empty([len(fileContents)], object)
